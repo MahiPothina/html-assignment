@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Example</title>
+    <script>
+        function displayDate() {
+            let today = new Date();
+            let date = today.toLocaleDateString();
+            document.getElementById("dateBox").value = date;
+        }
+
+        function calculateFactorial() {
+            let n = prompt("Enter a number:");
+            if (!n) {
+                alert("No number entered!");
+                return;
+            }
+            n = parseInt(n);
+            let fact = 1;
+            for (let i = 1; i <= n; i++) {
+                fact *= i;
+            }
+            alert("Factorial of " + n + " is " + fact);
+        }
+
+        function clearText() {
+            document.getElementById("dateBox").value = "";
+        }
+    </script>
+</head>
+<body>
+    <h3>JavaScript POP-UP Boxes and Functions</h3>
+
+    <button onclick="displayDate()">Display Date</button>
+    <input type="text" id="dateBox">
+    <button onclick="calculateFactorial()">Calculate Factorial</button>
+    <button onclick="clearText()">Clear</button>
+</body>
+</html>
