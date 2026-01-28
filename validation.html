@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration</title>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 7px;
+    margin: 5px 0 10px 0;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.error {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+label {
+    font-weight: bold;
+}
+.gender, .terms {
+    margin: 5px 0 10px 0;
+}
+</style>
+<script>
+function validate() {
+  let ok = true;
+  document.querySelectorAll(".error").forEach(e => e.innerHTML="");
+  if(name.value==""){ n.innerHTML="Name required"; ok=false; }
+  if(!email.value.match(/^[^ ]+@[^ ]+\.[a-z]{2,3}$/)){ e.innerHTML="Invalid email"; ok=false; }
+  if(pwd.value.length<8){ p.innerHTML="Min 8 characters"; ok=false; }
+  if(pwd.value!=cpwd.value){ c.innerHTML="Passwords not matching"; ok=false; }
+  if(!mob.value.match(/^[0-9]{10}$/)){ m.innerHTML="Enter 10 digit number"; ok=false; }
+  if(!document.querySelector('input[name="g"]:checked')){ g.innerHTML="Select gender"; ok=false; }
+  if(!t.checked){ t1.innerHTML="Accept terms"; ok=false; }
+  return ok;
+}
+</script>
+</head>
+<body>
+<form onsubmit="return validate()">
+<label>Name:</label>
+<input id="name">
+<div id="n" class="error"></div>
+
+<label>Email:</label>
+<input id="email">
+<div id="e" class="error"></div>
+
+<label>Password:</label>
+<input type="password" id="pwd">
+<div id="p" class="error"></div>
+
+<label>Confirm Password:</label>
+<input type="password" id="cpwd">
+<div id="c" class="error"></div>
+
+<label>Mobile:</label>
+<input id="mob">
+<div id="m" class="error"></div>
+
+<div class="gender">
+  <label>Gender:</label>
+  <input type="radio" name="g">Male
+  <input type="radio" name="g">Female
+</div>
+<div id="g" class="error"></div>
+
+<div class="terms">
+  <input type="checkbox" id="t"> Accept Terms & Conditions
+</div>
+<div id="t1" class="error"></div>
+
+<input type="submit" value="Register">
+</form>
+</body>
+</html>
