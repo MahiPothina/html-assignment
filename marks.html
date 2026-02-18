@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marks Calculator</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        input {
+            padding: 6px;
+            margin: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 8px 12px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Enter Marks of 5 Subjects</h2>
+
+    <input type="number" id="m1" placeholder="Subject 1"><br>
+    <input type="number" id="m2" placeholder="Subject 2"><br>
+    <input type="number" id="m3" placeholder="Subject 3"><br>
+    <input type="number" id="m4" placeholder="Subject 4"><br>
+    <input type="number" id="m5" placeholder="Subject 5"><br>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <div id="result"></div>
+
+    <script>
+        function calculate() {
+            var m1 = parseFloat(document.getElementById("m1").value) || 0;
+            var m2 = parseFloat(document.getElementById("m2").value) || 0;
+            var m3 = parseFloat(document.getElementById("m3").value) || 0;
+            var m4 = parseFloat(document.getElementById("m4").value) || 0;
+            var m5 = parseFloat(document.getElementById("m5").value) || 0;
+
+            var total = m1 + m2 + m3 + m4 + m5;
+            var average = total / 5;
+            var grade = "";
+
+            if (average >= 90) grade = "A+";
+            else if (average >= 75) grade = "A";
+            else if (average >= 60) grade = "B";
+            else if (average >= 50) grade = "C";
+            else grade = "Fail";
+
+            document.getElementById("result").innerHTML =
+                "Total Marks: " + total + "<br>" +
+                "Average: " + average.toFixed(2) + "<br>" +
+                "Grade: " + grade;
+        }
+    </script>
+
+</body>
+</html>
