@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number to Words</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input {
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 8px 12px;
+            font-size: 16px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: blue;
+        }
+
+        #error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Enter number (0–999)</h2>
+
+    <input type="text" id="num" maxlength="3">
+    <button onclick="convert()">Show in Words</button>
+
+    <div id="error"></div>
+    <div id="result"></div>
+
+    <script>
+        function convert() {
+            var n = document.getElementById("num").value;
+            var error = document.getElementById("error");
+            var result = document.getElementById("result");
+
+            error.innerText = "";
+            result.innerText = "";
+
+            if (!/^\d{1,3}$/.test(n)) {
+                error.innerText = "Enter only numbers between 0 and 999";
+                return;
+            }
+
+            n = parseInt(n);
+
+            var ones = ["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"];
+            var teens = ["Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"];
+            var tens = ["","","Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety"];
+
+            var words = "";
+
+            if (n >= 100) {
+                words += ones[Math.floor(n/100)] + " Hundred ";
+                n = n % 100;
+            }
+
+            if (n >= 10 && n < 20) {
+                words += teens[n-10];
+            } else {
+                if (n >= 20) {
+                    words += tens[Math.floor(n/10)] + " ";
+                    n = n % 10;
+                }
+                if (n > 0) {
+                    words += ones[n];
+                }
+                if (words === "") words = "Zero";
+            }
+
+            result.innerText = words.trim();
+        }
+    </script>
+
+</body>
+</html>
