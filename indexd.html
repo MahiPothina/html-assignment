@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Website Layout using DIV</title>
+
+<style>
+body{margin:0;font-family:Arial;}
+
+.header{
+background:#ecf0f1;
+padding:20px;
+display:flex;
+align-items:center;
+}
+
+.header img{
+width:70px;
+height:70px;
+margin-right:20px;
+}
+
+.menu{
+background:#2c3e50;
+padding:12px;
+text-align:center;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+margin:0 20px;
+font-weight:bold;
+}
+
+.container{
+display:flex;
+}
+
+.sidebar{
+width:25%;
+background:#f4f6f7;
+padding:20px;
+}
+
+.sidebar a{
+display:block;
+margin:10px 0;
+color:black;
+text-decoration:none;
+font-weight:bold;
+}
+
+.content{
+width:75%;
+}
+
+iframe{
+width:100%;
+height:500px;
+border:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<img src="logo.png">
+<h2>My Website Header</h2>
+</div>
+
+<div class="menu">
+<a href="homed.html" target="rightframe">Home</a>
+<a href="logind.html" target="rightframe">Login</a>
+<a href="registrationd.html" target="rightframe">Registration</a>
+<a href="catalogued.html" target="rightframe">Catalogue</a>
+<a href="cartd.html" target="rightframe">Cart</a>
+<a href="contactd.html" target="rightframe">Contact Us</a>
+</div>
+
+<div class="container">
+
+<div class="sidebar">
+<h3>Services</h3>
+<a href="service1d.html" target="rightframe">Web Design</a>
+<a href="service2d.html" target="rightframe">Development</a>
+<a href="service3d.html" target="rightframe">Support</a>
+</div>
+
+<div class="content">
+<iframe name="rightframe"></iframe>
+</div>
+
+</div>
+
+</body>
+</html>
