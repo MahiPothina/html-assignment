@@ -1,20 +1,33 @@
-<!DOCTYPE html>
 <html>
 <head>
-<title>Website Layout</title>
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#2c3e50;
+}
+
+a{
+color:white;
+text-decoration:none;
+padding:14px 25px;
+display:inline-block;
+}
+
+a:hover{
+background:#1abc9c;
+}
+</style>
 </head>
 
-<frameset rows="120px,60px,*">
+<body>
 
-<frame src="top.html">
+<a href="home.html" target="rightframe">Home</a>
+<a href="login.html" target="rightframe">Login</a>
+<a href="registration.html" target="rightframe">Registration</a>
+<a href="catalogue.html" target="rightframe">Catalogue</a>
+<a href="cart.html" target="rightframe">Cart</a>
+<a href="contact.html" target="rightframe">Contact Us</a>
 
-<frame src="menu.html">
-
-<frameset cols="25%,75%">
-<frame src="services.html">
-<frame name="rightframe">
-</frameset>
-
-</frameset>
-
+</body>
 </html>
