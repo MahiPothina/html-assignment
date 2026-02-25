@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="users.xsl"?>
+
+<Users>
+  <User>
+    <ID>1</ID>
+    <Name>Anu</Name>
+    <Role>Student</Role>
+    <Department>CSE</Department>
+    <Email>anu@college.edu</Email>
+  </User>
+
+  <User>
+    <ID>2</ID>
+    <Name>Riya</Name>
+    <Role>Faculty</Role>
+    <Department>Maths</Department>
+    <Email>riya@college.edu</Email>
+  </User>
+
+  <User>
+    <ID>3</ID>
+    <Name>Diya</Name>
+    <Role>Student</Role>
+    <Department>Physics</Department>
+    <Email>diya@college.edu</Email>
+  </User>
+
+  <User>
+    <ID>4</ID>
+    <Name>Neha</Name>
+    <Role>Faculty</Role>
+    <Department>Chemistry</Department>
+    <Email>neha@college.edu</Email>
+  </User>
+
+  <User>
+    <ID>5</ID>
+    <Name>Sara</Name>
+    <Role>Student</Role>
+    <Department>Mechanical</Department>
+    <Email>sara@college.edu</Email>
+  </User>
+
+  <User>
+    <ID>6</ID>
+    <Name>Tina</Name>
+    <Role>Student</Role>
+    <Department>ECE</Department>
+    <Email>tina@college.edu</Email>
+  </User>
+
+  <User>
+    <ID>7</ID>
+    <Name>Kavi</Name>
+    <Role>Faculty</Role>
+    <Department>Civil</Department>
+    <Email>kavi@college.edu</Email>
+  </User>
+
+  <User>
+    <ID>8</ID>
+    <Name>Mira</Name>
+    <Role>Student</Role>
+    <Department>Biotech</Department>
+    <Email>mira@college.edu</Email>
+  </User>
+
+  <User>
+    <ID>9</ID>
+    <Name>Laya</Name>
+    <Role>Faculty</Role>
+    <Department>English</Department>
+    <Email>laya@college.edu</Email>
+  </User>
+
+  <User>
+    <ID>10</ID>
+    <Name>Pihu</Name>
+    <Role>Student</Role>
+    <Department>IT</Department>
+    <Email>pihu@college.edu</Email>
+  </User>
+
+</Users>
