@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="books.xsl"?>
+
+<!DOCTYPE Books SYSTEM "books.dtd">
+
+<Books>
+
+    <Book>
+        <Title>Computer Basics</Title>
+        <Author>Ram</Author>
+        <ISBN>978-1010101010</ISBN>
+        <Publisher>Bright Publications</Publisher>
+        <Edition>1</Edition>
+        <Price>200</Price>
+    </Book>
+
+    <Book>
+        <Title>Data Structures</Title>
+        <Author>Sita</Author>
+        <ISBN>978-2020202020</ISBN>
+        <Publisher>Future Books</Publisher>
+        <Edition>2</Edition>
+        <Price>350</Price>
+    </Book>
+
+    <Book>
+        <Title>Web Technology</Title>
+        <Author>Arun</Author>
+        <ISBN>978-3030303030</ISBN>
+        <Publisher>Tech Media</Publisher>
+        <Edition>3</Edition>
+        <Price>275</Price>
+    </Book>
+
+    <Book>
+        <Title>Programming in C</Title>
+        <Author>Meena</Author>
+        <ISBN>978-4040404040</ISBN>
+        <Publisher>Smart Press</Publisher>
+        <Edition>1</Edition>
+        <Price>220</Price>
+    </Book>
+
+    <Book>
+        <Title>Database Concepts</Title>
+        <Author>Kiran</Author>
+        <ISBN>978-5050505050</ISBN>
+        <Publisher>Knowledge Hub</Publisher>
+        <Edition>2</Edition>
+        <Price>300</Price>
+    </Book>
+
+</Books>
